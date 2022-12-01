@@ -1,9 +1,8 @@
-import React , {useContext, useState, useRef}from "react";
+import React , {useState}from "react";
 import { Task } from "../types/types";
-export default function Main() {
-    //const [todo, setTodo] = useState("");
+import { Link } from "react-router-dom";
+export default function Todo() {
     const [tasks, setTasks] = useState<Task[]>([]);
-    //const [task, setTask] = useState
     const addItem = (e : any) => {
         
         e.preventDefault();
@@ -38,6 +37,7 @@ export default function Main() {
                 <input name="todo"></input>
                 <button type = "submit">Add</button>
             </form>
+            <Link to="/">Back To Home</Link>
         </div>
     )
 }
